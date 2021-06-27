@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: crudmicronaut
+    
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres            
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: password
+jpa:
+ default:
+   packages-to-scan:
+     - 'com.microdata'
+   properties:
+    hibernate:
+      bytecode:
+        provider: none
+    hbm2ddl:
+      auto: update
+    show_sql: true
+    
